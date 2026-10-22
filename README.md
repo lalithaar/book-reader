@@ -7,6 +7,16 @@ it, and it opens on the same page next time. No accounts, no sync, no network.
 - **Stack:** Rust + Tauri v2 + WebView2, static HTML/CSS/vanilla JS
 - **Data:** plain JSON files under `%APPDATA%\dev.bookreader.app\`
 
+## Download
+
+Grab the latest release:
+
+[**book-reader-v0.1.0-windows-x64.exe**](https://github.com/lalithaar/book-reader/releases/download/v0.1.0/book-reader-v0.1.0-windows-x64.exe)
+([releases page](https://github.com/lalithaar/book-reader/releases))
+
+There is no installer. Download the `.exe`, copy it anywhere you like, and run
+it. It needs the WebView2 runtime, which is preinstalled on Windows 10/11.
+
 ## Build and run
 
 Requirements: Rust (MSVC toolchain), Visual Studio Build Tools with the Windows
