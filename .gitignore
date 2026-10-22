@@ -1,0 +1,13 @@
+# Rust / Tauri build output
+/src-tauri/target/
+**/target/
+/src-tauri/gen/schemas/
+
+# Editors / OS
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Misc
+*.log

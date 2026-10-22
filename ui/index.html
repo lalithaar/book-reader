@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en" data-theme="sepia">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Book Reader</title>
+  <link rel="stylesheet" href="app.css">
+</head>
+<body>
+
+  <section id="library" class="screen">
+    <header class="bar">
+      <div class="brand">Library</div>
+      <div class="grow"></div>
+      <input id="filter" class="filter" type="search" placeholder="Filter" spellcheck="false" autocomplete="off">
+      <button id="import" class="btn">Add books</button>
+    </header>
+    <main id="grid" class="grid"></main>
+    <div id="empty" class="empty" hidden>
+      <p class="empty-title">Nothing here yet</p>
+      <p class="muted">Drop an EPUB, FB2, TXT or Markdown file anywhere in this window, or press <kbd>O</kbd>.</p>
+    </div>
+  </section>
+
+  <section id="reader" class="screen" hidden>
+    <div id="viewport">
+      <div id="page" class="page"></div>
+    </div>
+
+    <div id="chrome" class="chrome">
+      <div class="chrome-row">
+        <button class="ghost" data-act="back" title="Library (Esc)">Library</button>
+        <div class="titles">
+          <div id="book-title" class="book-title"></div>
+          <div id="chapter-title" class="chapter-title"></div>
+        </div>
+        <div class="grow"></div>
+        <button class="ghost" data-act="toc" title="Contents (T)">Contents</button>
+        <button class="ghost" data-act="marks" title="Bookmarks (Shift+B)">Marks</button>
+        <button class="ghost" data-act="find" title="Search (Ctrl+F)">Find</button>
+        <button class="ghost" data-act="settings" title="Typography (S)">Aa</button>
+      </div>
+      <div class="bar-track"><div id="progress" class="bar-fill"></div></div>
+    </div>
+
+    <div id="footer" class="footer"><span id="page-label"></span></div>
+
+    <aside id="panel" class="panel" hidden>
+      <div class="panel-head">
+        <strong id="panel-title"></strong>
+        <div class="grow"></div>
+        <button class="ghost" data-act="close-panel">Close</button>
+      </div>
+      <div id="panel-body" class="panel-body"></div>
+    </aside>
+
+    <div id="toast" class="toast" hidden></div>
+  </section>
+
+  <div id="drop" class="drop" hidden>Drop to add to your library</div>
+
+  <script src="app.js"></script>
+</body>
+</html>
